@@ -43,7 +43,7 @@ function AddNewBtn({ page }: { page: string }) {
           <p className="modal-custom-title">New Employee</p>
         </Modal.Header>
         <Modal.Body>
-          <FormComponent setShow={setShow} page={page} />
+          <FormComponent setShow={setShow} />
         </Modal.Body>
       </Modal>
     </>

@@ -2,11 +2,24 @@ import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 
 import EmployeeCard from "./employee/EmployeeCard";
 import AddNewBtn from "./AddNewBtn";
-import { useContext } from "react";
+import { ChangeEvent, useContext, useState } from "react";
 import { EmployeesContext } from "../contexts/EmployeesContextProvider";
 
 const Employees = () => {
   const { employees } = useContext(EmployeesContext);
+  const [searchItem, setSearchItem] = useState("");
+  const [employeesArr, setFilteredEmployeesArr] = useState(employees);
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const searchTerm = e.target.value;
+    setSearchItem(searchTerm);
+
+    const filteredItems = employeesArr.filter((emp) =>
+      emp.name.toLowerCase().includes(searchItem.toLowerCase())
+    );
+
+    setFilteredEmployeesArr(filteredItems);
+  };
+
   return (
     <section className="bg-employee-section min-vh-100">
       <form className="row g-3 w-100 p-3 justify-content-center align-items-center  position-relative">
@@ -20,6 +33,8 @@ const Employees = () => {
             className=" ms-2 w-100 form-control pleft-10px fs-small-13 border border-primary-subtle shadow-none"
             id="exampleFormControlInput1"
             placeholder="Search"
+            value={searchItem}
+            onChange={(e) => handleInputChange(e)}
           />
         </div>
         <div className="col-sm-2 col-md-1">
@@ -28,9 +43,9 @@ const Employees = () => {
       </form>
 
       <div className="row p-3">
-        {employees &&
-          employees.length > 0 &&
-          employees.map((employee) => (
+        {employeesArr &&
+          employeesArr.length > 0 &&
+          employeesArr.map((employee) => (
             <div className="col-md-3" key={employee.name}>
               <EmployeeCard employee={employee} />
             </div>

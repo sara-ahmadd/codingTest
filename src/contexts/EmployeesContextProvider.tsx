@@ -46,8 +46,9 @@ const EmployeeContextProvider = ({ children }: { children: ReactNode }) => {
           newEmployee
         );
         setEmployees(newArr);
+      } else {
+        setEmployees([...employees, newEmployee]);
       }
-      setEmployees([...employees, newEmployee]);
     }
   };
   const updateEmployees = (deletedEmp: Employee) => {

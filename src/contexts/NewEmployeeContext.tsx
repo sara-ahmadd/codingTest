@@ -17,6 +17,7 @@ const initContext: EmployContext = {
     directManager: "Mohamed tarek",
     attendenceProfile: "Weekend",
     image: undefined,
+    id: "djrgjjjjowa78r542",
   },
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

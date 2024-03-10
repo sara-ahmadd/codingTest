@@ -6,13 +6,7 @@ import { Employee } from "../../../interfaces";
 import OfficeInfo from "./OfficeInfo";
 import PersonalInfo from "./PersonalInfo";
 import { EmployeesContext } from "../../contexts/EmployeesContextProvider";
-function FormComponent({
-  page,
-  setShow,
-}: {
-  page: string;
-  setShow: (state: boolean) => void;
-}) {
+function FormComponent({ setShow }: { setShow: (state: boolean) => void }) {
   const [preview, setPreview] = useState<ArrayBuffer | null | string>();
   const { employees, handleEmpoyeesArray } = useContext(EmployeesContext);
   const [employeeForm, setEmployeeForm] = useState<Employee>({
@@ -27,7 +21,7 @@ function FormComponent({
     directManager: "",
     attendenceProfile: "",
     image: undefined,
-    id: "duohlr984e567hdufrgth",
+    id: "",
   });
   //drop-zone package
   const onDrop = useCallback(
@@ -45,9 +39,9 @@ function FormComponent({
 
   const submitForm = (e: React.FormEvent) => {
     e.preventDefault();
-    if (page === "employees") {
-      handleEmpoyeesArray(employeeForm);
-    }
+
+    handleEmpoyeesArray(employeeForm);
+
     console.log(employees);
   };
 
