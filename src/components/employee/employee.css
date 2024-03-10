@@ -1,0 +1,81 @@
+@import "./../../index.css";
+
+.employee-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 401px;
+  height: 106.8px;
+  padding: 10px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+}
+.badge-w-h {
+  width: 48px;
+  height: 13px;
+  padding: 15px;
+}
+.absent {
+  font-weight: bold;
+  color: rgb(231, 86, 86);
+  background: var(--bg-pale-red-color-opacity-016);
+}
+.weekend {
+  font-weight: bold;
+  color: var(--dark-blue-color);
+  background: var(--bg-dark-blue-color-opacity-016);
+}
+.present {
+  font-weight: bold;
+  color: var(--dark-blue-color);
+  background: var(--bg-pale-green-color-opacity-016);
+}
+.holiday {
+  font-weight: bold;
+  color: var(--light-blue-color);
+  background: var(--bg-pale-blue-color-opacity-016);
+}
+.onleave {
+  font-weight: bold;
+  color: var(--on-leave-gray);
+  background: var(--bg-on-leave-gray-opacity016);
+}
+.icons > span:not(:nth-child(3)) {
+  width: 20px;
+  height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeef0;
+}
+.icons > span:nth-child(3) {
+  width: 20px;
+  height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeef0;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+}
+.infoCard {
+  position: absolute;
+  background: #fff;
+  bottom: -170px;
+  right: -10px;
+  width: 237px;
+  height: fit-content;
+}
+.infoCard p {
+  color: #313030;
+}
+.infoCard h4 {
+  color: #8997a4;
+}
+.infoArrow {
+  position: absolute;
+  bottom: -20px;
+  right: 3px;
+  width: 0;
+  height: 0;
+  border: 12px solid;
+  border-color: transparent transparent #fff transparent;
+}

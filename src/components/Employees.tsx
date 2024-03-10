@@ -1,11 +1,14 @@
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 
-import EmployeeCard from "./EmployeeCard";
+import EmployeeCard from "./employee/EmployeeCard";
 import AddNewBtn from "./AddNewBtn";
+import { useContext } from "react";
+import { EmployeesContext } from "../contexts/EmployeesContextProvider";
 
 const Employees = () => {
+  const { employees } = useContext(EmployeesContext);
   return (
-    <section className="bg-employee-section">
+    <section className="bg-employee-section min-vh-100">
       <form className="row g-3 w-100 p-3 justify-content-center align-items-center  position-relative">
         <div className="col-sm-10 col-md-11  position-relative">
           <HiMiniMagnifyingGlass
@@ -20,12 +23,19 @@ const Employees = () => {
           />
         </div>
         <div className="col-sm-2 col-md-1">
-          <AddNewBtn />
+          <AddNewBtn page="employees" />
         </div>
       </form>
-      {/* </div> */}
 
-      <EmployeeCard />
+      <div className="row p-3">
+        {employees &&
+          employees.length > 0 &&
+          employees.map((employee) => (
+            <div className="col-md-3" key={employee.name}>
+              <EmployeeCard employee={employee} />
+            </div>
+          ))}
+      </div>
     </section>
   );
 };

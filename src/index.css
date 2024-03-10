@@ -18,13 +18,29 @@
   --light-green-color: #27b40c;
   --bs-modal-width: 80vw !important;
   --pale-gray: rgba(35, 170, 235, 0.14);
+  --on-leave-gray: rgb(137, 151, 164);
   --modal-bg-color: rgba(40, 104, 174, 0.34);
+  --bg-on-leave-gray-opacity016: rgb(137, 151, 164, 0.16);
+  --bg-pale-red-color-opacity-016: rgb(255, 106, 106, 0.16);
+  --bg-pale-blue-color-opacity-016: rgb(35, 170, 235, 0.16);
+  --bg-dark-blue-color-opacity-016: rgb(39, 101, 172, 0.16);
+  --bg-pale-green-color-opacity-016: rgb(39, 180, 12, 0.16);
 }
 
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
 }
 a:hover {
   color: #535bf2;
@@ -97,6 +113,9 @@ a.active {
 .fs-small-10 {
   font-size: 10px;
 }
+.fs-small-8 {
+  font-size: 8px;
+}
 .bg-pale-red {
   background-color: var(--light-red-color);
 }
@@ -158,9 +177,7 @@ a.active {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-/* .parag-btn {
-  height: 15px;
-} */
+
 .h-21 {
   height: 21px;
 }
@@ -214,6 +231,8 @@ a.active {
 }
 .modal-90w {
   width: 80vw !important;
+
+  height: 658px !important;
 }
 .modal-dialog {
   max-width: 80vw !important;
