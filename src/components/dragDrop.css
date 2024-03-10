@@ -1,0 +1,7 @@
+.drag-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: dotted 2px var(--pale-gray);
+}

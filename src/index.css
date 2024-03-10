@@ -16,6 +16,9 @@
   --dark-blue-color: #2765ac;
   --light-red-color: #ff6a6a;
   --light-green-color: #27b40c;
+  --bs-modal-width: 80vw !important;
+  --pale-gray: rgba(35, 170, 235, 0.14);
+  --modal-bg-color: rgba(40, 104, 174, 0.34);
 }
 
 a {
@@ -29,10 +32,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
   font-family: "Roboto", sans-serif;
 }
 
@@ -81,11 +81,21 @@ button:focus-visible {
 a.active {
   background-color: var(--dark-blue-color);
 }
+
 .fs-small-12 {
   font-size: 12px;
 }
+.fs-small-11 {
+  font-size: 11px;
+}
+.fs-small-20 {
+  font-size: 20px;
+}
 .fs-small-13 {
   font-size: 13px;
+}
+.fs-small-10 {
+  font-size: 10px;
 }
 .bg-pale-red {
   background-color: var(--light-red-color);
@@ -97,11 +107,12 @@ a.active {
 /* side bar */
 .badge-position {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: -10px;
+  right: 0;
 }
 .sid-bar-link-padding {
   padding: 19px 21px 23px;
+  height: 98px;
 }
 .side-bar {
   height: 1291px;
@@ -120,19 +131,20 @@ a.active {
 }
 .emplyee-card {
   display: flex;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.09);
 }
 .text-light-blue-color {
   color: var(--light-blue-color);
 }
 .search-icon {
   top: 10px;
-  left: 10px;
+  left: 20px;
 }
 .pleft-10px {
   padding-left: 30px;
 }
 .add-btn {
-  width: fit-content;
+  width: 101px;
   height: 30px;
   display: flex;
   justify-content: center;
@@ -146,17 +158,16 @@ a.active {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-.parag-btn {
+/* .parag-btn {
   height: 15px;
-  width: 50px;
-}
+} */
 .h-21 {
   height: 21px;
 }
-.link-border {
+.employee-img-border {
   border: solid 4px #8997a4;
 }
-.employee-card-border-line {
+.employee-card-links-border-line {
   border: solid 4px #59c203;
 }
 .modal-bg-color {
@@ -164,4 +175,80 @@ a.active {
 }
 .bg-employee-section {
   background-color: #f7f8f9;
+}
+.employee-card-icons {
+  font-size: 8.6px;
+}
+.employee-card-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.employee-card-popup {
+  font-size: 8px;
+}
+.icons-under-employee-img {
+  color: #8997a4;
+}
+.icons-under-employee-info {
+  color: #313030;
+}
+/* modal */
+.modal-content {
+  border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  -ms-border-radius: 4px !important;
+  -o-border-radius: 4px !important;
+}
+.modal-btn {
+  width: 85px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-90w {
+  width: 80vw !important;
+}
+.modal-dialog {
+  max-width: 80vw !important;
+}
+.modal-custom-title {
+  width: 100%;
+  color: var(--light-blue-color);
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.modal-header {
+  padding: 15px !important;
+  border: none !important;
+  border-bottom: solid 2px var(--light-blue-color) !important;
+  padding-bottom: 5px !important;
+}
+.modal-backdrop {
+  background: var(--modal-bg-color) !important;
+  backdrop-filter: blur(3px) !important;
+}
+.form-title {
+  color: var(--light-blue-color);
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+}
+.form-title:after {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  content: "";
+  width: 44px;
+  height: 4px;
+  border-radius: 3px;
+  background-color: var(--pale-gray);
 }

@@ -35,22 +35,24 @@ const SideBar = () => {
     },
   ];
   return (
-    <div className="d-flex flex-column ">
+    <div className="d-flex flex-column">
       {links &&
         links.length > 0 &&
         links.map((link) => (
           <NavLink
             to={link.path}
             key={link.path}
-            className={`d-flex  flex-column justify-content-center align-items-center  gap-2 sid-bar-link-padding position-relative `}
+            className={`d-flex  flex-column justify-content-center align-items-center  gap-1 sid-bar-link-padding `}
           >
-            {link.path === "/employees" ? (
-              <span className=" badge bg-pale-red rounded-circle  badge-position">
-                5
-              </span>
-            ) : null}
-            <link.icon size={28.6} color="white" />
-            <p className="text-white fs-small-12">{link.text}</p>
+            <div className=" d-flex  flex-column justify-content-center align-items-center  gap-2  position-relative">
+              {link.path === "/employees" ? (
+                <span className=" badge bg-pale-red rounded-circle  badge-position">
+                  5
+                </span>
+              ) : null}
+              <link.icon size={28.6} color="white" />
+              <p className="text-white fs-small-12 text-center">{link.text}</p>
+            </div>
           </NavLink>
         ))}
     </div>
