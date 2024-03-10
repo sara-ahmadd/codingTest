@@ -17,6 +17,7 @@ const OfficeInfo = ({
             Office
           </label>
           <select
+            required
             value={employeeForm.office}
             onChange={(e) =>
               setEmployeeForm({
@@ -43,6 +44,7 @@ const OfficeInfo = ({
               Department
             </label>
             <select
+              required
               value={employeeForm.department}
               onChange={(e) =>
                 setEmployeeForm({
@@ -66,6 +68,7 @@ const OfficeInfo = ({
               Role
             </label>
             <select
+              required
               value={employeeForm.role}
               onChange={(e) =>
                 setEmployeeForm({
@@ -89,6 +92,7 @@ const OfficeInfo = ({
               Direct Manager
             </label>
             <select
+              required
               value={employeeForm.directManager}
               onChange={(e) =>
                 setEmployeeForm({
@@ -114,6 +118,7 @@ const OfficeInfo = ({
               Attendence Profile
             </label>
             <select
+              required
               value={employeeForm.attendenceProfile}
               onChange={(e) =>
                 setEmployeeForm({
@@ -139,6 +144,7 @@ const OfficeInfo = ({
               Position
             </label>
             <select
+              required
               value={employeeForm.position}
               onChange={(e) =>
                 setEmployeeForm({

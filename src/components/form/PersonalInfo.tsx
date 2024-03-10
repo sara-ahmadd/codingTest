@@ -16,6 +16,7 @@ const PersonalInfo = ({
             Name
           </label>
           <input
+            required
             type="text"
             value={employeeForm.name}
             onChange={(e) =>
@@ -34,6 +35,7 @@ const PersonalInfo = ({
             Phone
           </label>
           <input
+            required
             value={employeeForm.phone}
             onChange={(e) =>
               setEmployeeForm({
@@ -54,6 +56,7 @@ const PersonalInfo = ({
             Start Date
           </label>
           <input
+            required
             value={employeeForm.startDate}
             onChange={(e) =>
               setEmployeeForm({
@@ -75,6 +78,7 @@ const PersonalInfo = ({
             Email
           </label>
           <input
+            required
             value={employeeForm.email}
             onChange={(e) =>
               setEmployeeForm({

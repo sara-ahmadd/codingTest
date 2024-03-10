@@ -42,31 +42,10 @@ function FormComponent({
     [employeeForm]
   );
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
-  const {
-    name,
-    role,
-    office,
-    department,
-    position,
-    attendenceProfile,
-    phone,
-    email,
-    startDate,
-  } = employeeForm;
+
   const submitForm = (e: React.FormEvent) => {
     e.preventDefault();
-    if (
-      page === "employees" &&
-      name &&
-      role &&
-      office &&
-      department &&
-      position &&
-      attendenceProfile &&
-      phone &&
-      email &&
-      startDate
-    ) {
+    if (page === "employees") {
       handleEmpoyeesArray(employeeForm);
     }
     console.log(employees);
